@@ -1,0 +1,33 @@
+{
+  "name": "challenge-css",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-gulp": "gulp",
+    "compile": "sass ./src/scss/styles.scss ./dist/css/styles.css --load-path ./src/scss",
+    "clear": "gulp cleanDist",
+    "server": "http-server ./dist"
+  },
+  "author": "Klyukova Kristina",
+  "license": "ISC",
+  "dependencies": {
+    "@ya.praktikum/react-developer-burger-ui-components": "^1.14.0",
+    "core-js": "^3.28.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "postcss": "^8.4.23",
+    "sass": "^1.62.0",
+    "swiper": "^9.2.4"
+  }
+}
