@@ -4,12 +4,13 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const clean = require("gulp-clean");
 const uglify = require("gulp-uglify-es").default;
+const rigger = require('gulp-rigger');
 const browserSync = require("browser-sync").create();
 const DIST_PATH = "./dist";
 
 function css() {
   return gulp
-    .src(["./src/sass/index-dark.sass","./src/sass/index.sass"])
+    .src(["./src/scss/index.scss"])
     .pipe(sass({ includePaths: ["src/scss"] }).on("error", sass.logError))
     .pipe(postcss([autoprefixer]))
     .pipe(sass({ outputStyle: "compressed" }))
@@ -37,9 +38,15 @@ function images() {
   return gulp.src("./src/images/**/*").pipe(gulp.dest(`${DIST_PATH}/images`));
 }
 
+// function  gulp.task('default', function () {
+//   gulp.src('app/*.js')
+//       .pipe(rigger())
+//       .pipe(gulp.dest('build/'));
+// });
+
 function watching() {
-  gulp.watch(["./src/sass/index.sass"], css);
-  gulp.watch(["./src/blocks/**/*.sass"], css);
+  gulp.watch(["./src/scss/*.scss"], css);
+  gulp.watch(["./src/blocks/**/*.scss"], css);
   gulp.watch(["./src/pages/index.js"], scripts);
   gulp.watch(["./src/images/**/*"], images);
   gulp.watch(["./src/*.html"], html);

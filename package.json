@@ -13,7 +13,6 @@
   "author": "Klyukova Kristina",
   "license": "ISC",
   "dependencies": {
-    "@ya.praktikum/react-developer-burger-ui-components": "^1.14.0",
     "core-js": "^3.28.0"
   },
   "devDependencies": {
@@ -21,9 +20,11 @@
     "browser-sync": "^2.29.1",
     "eslint-config-airbnb": "^19.0.4",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^9.0.1",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^3.0.0",
     "postcss": "^8.4.23",
