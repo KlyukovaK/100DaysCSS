@@ -4,7 +4,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const clean = require("gulp-clean");
 const uglify = require("gulp-uglify-es").default;
-const rigger = require('gulp-rigger');
+const fileinclude = require("gulp-file-include");
 const browserSync = require("browser-sync").create();
 const DIST_PATH = "./dist";
 
@@ -27,6 +27,12 @@ function scripts() {
 function html() {
   return gulp
     .src("./src/*.html")
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
     .pipe(gulp.dest(`${DIST_PATH}`))
     .pipe(browserSync.stream());
 }
