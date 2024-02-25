@@ -2,7 +2,13 @@
 
 @use "../days/day_1/dayOne.scss";
 @use "../days/day_2/dayTwo.scss";
+@use "../days/day_3/dayThree.scss";
 
 .body {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 85%;
+  margin: 60px auto;
 }
