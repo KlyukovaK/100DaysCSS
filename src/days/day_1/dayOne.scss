@@ -1,0 +1,80 @@
+@use "../../scss/mixins/frame.scss" as frame;
+
+.dayOne__frame {
+  @include frame.frame;
+  background: linear-gradient(to bottom left, blue, pink);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43389F', endColorstr='#4ec6ca',GradientType=1 );
+  font-family: "Courier New", "Courier", sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.dayOne__center {
+  @include frame.center;
+}
+.dayOne__number {
+  @include frame.center;
+  position: relative;
+  .dayOne__one {
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 40px;
+    border-radius: 3px;
+    transform: rotate(50deg);
+    z-index: 1;
+    top: 0px;
+    left: -16px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  .dayOne__one-too {
+    position: absolute;
+    background: #fff;
+    width: 24px;
+    height: 100px;
+    border-radius: 3px;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  .dayOne__zero-one,
+  .dayOne__zero-two {
+    position: absolute;
+    border: 24px solid #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 2;
+    top: 0;
+    left: 17px;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  .dayOne__zero-two {
+    left: 100px;
+    z-index: 1;
+  }
+}
+.dayOne__days {
+  position: relative;
+  z-index: 20;
+  display: block;
+  font-size: 82px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 106px;
+  color: #fff;
+}
+.dayOne__cssch {
+  position: relative;
+  z-index: 20;
+  display: block;
+  font-size: 23px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
