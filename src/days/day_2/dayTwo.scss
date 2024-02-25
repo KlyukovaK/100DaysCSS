@@ -20,26 +20,25 @@
   border-radius: 3px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
   margin: 0px auto;
-  .line-one {
-    animation: animate-line-one-del 0.7s ease-in-out;
-  }
-  .line-two {
-    animation: animate-line-two-del 0.7s ease-in-out;
-  }
-  .line-three {
-    animation: animate-line-three-del 0.7s ease-in-out;
-  }
-  .line-one.active {
-    animation: animate-line-one 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
-  }
-  .line-two.active {
-    animation: animate-line-two 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
-  }
-  .line-three.active {
-    animation: animate-line-three 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
-  }
 }
-
+.line-one {
+  animation: animate-line-one-del 0.7s ease-in-out;
+}
+.line-two {
+  animation: animate-line-two-del 0.7s ease-in-out;
+}
+.line-three {
+  animation: animate-line-three-del 0.7s ease-in-out;
+}
+.line-one.active {
+  animation: animate-line-one 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+.line-two.active {
+  animation: animate-line-two 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+.line-three.active {
+  animation: animate-line-three 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
 @keyframes animate-line-one {
   from {
     transform: translateY(0px);
